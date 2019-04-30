@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="db_image">
+    <db_image action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <category>general</category>
+        <format>png</format>
+        <height>37</height>
+        <image>128c094bb3413300d66e85d516a8dcbc</image>
+        <name>train.png</name>
+        <size_bytes>1106</size_bytes>
+        <sys_class_name>db_image</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-04-30 21:06:08</sys_created_on>
+        <sys_id>5c7cc94bb3413300d66e85d516a8dc4d</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>train.png</sys_name>
+        <sys_package display_value="CTA Reservation" source="x_cta_reservation">1119f3c55341330092c7ddeeff7b1262</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="CTA Reservation">1119f3c55341330092c7ddeeff7b1262</sys_scope>
+        <sys_update_name>db_image_5c7cc94bb3413300d66e85d516a8dc4d</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-04-30 21:06:16</sys_updated_on>
+        <thumbnail/>
+        <width>32</width>
+    </db_image>
+    <sys_attachment action="INSERT_OR_UPDATE">
+        <average_image_color>#fdf0f1</average_image_color>
+        <chunk_size_bytes>734003</chunk_size_bytes>
+        <compressed>true</compressed>
+        <content_type>image/png</content_type>
+        <file_name>image</file_name>
+        <hash>d417e070e6ccfe2dc1a09443eacf29a10b7b48ef62513eecd793a7c84140631b</hash>
+        <image_height>37</image_height>
+        <image_width>32</image_width>
+        <size_bytes>1106</size_bytes>
+        <size_compressed>1129</size_compressed>
+        <state>available</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-04-30 21:06:15</sys_created_on>
+        <sys_id>128c094bb3413300d66e85d516a8dcbc</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-04-30 21:06:16</sys_updated_on>
+        <table_name>ZZ_YYdb_image</table_name>
+        <table_sys_id>5c7cc94bb3413300d66e85d516a8dc4d</table_sys_id>
+    </sys_attachment>
+    <sys_attachment_doc action="INSERT_OR_UPDATE">
+        <data>H4sIAAAAAAAAAA==</data>
+        <length>16</length>
+        <position>0</position>
+        <sys_attachment display_value="image" sys_id="128c094bb3413300d66e85d516a8dcbc">128c094bb3413300d66e85d516a8dcbc</sys_attachment>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-04-30 21:06:15</sys_created_on>
+        <sys_id>528c094bb3413300d66e85d516a8dcbc</sys_id>
+    </sys_attachment_doc>
+    <sys_attachment_doc action="INSERT_OR_UPDATE">
+        <data>AVIErfuJUE5HDQoaCgAAAA1JSERSAAAAIAAAACUIBgAAACO360cAAAAJcEhZcwAACxMAAAsTAQCanBgAAAQESURBVFiFtZdtaJtVFMd/TdM0DVlpNV1LVyiIFGs3rLUgdVQ6loqKc8UNqTBtUeakFrsqLezTPqnQ6aSTiQ72IaAfhCmVirJlY9hRimxzDNtESi0WagmubUqXtXnziR9yb/Y8eb2PZAcO9+aem/P/33PPvc89JYlEAoDu7m4rYAFsorVSXIkDGhAFNK/XGwcoSSQSEtwG2IXaBAFLkcA1QSAKhIVGvV5vvMTtdktwB1ApWjsPJgJhYAvYFG1UrtIuwHd65pdnigxskL6mhg7R1YC4PvQOz/zyTNX4GGW7Wyh79JGiAscWFonNzuEZGp3pa2rYg9gGfeLZgQcCDqT7lHlmsZLca6l5waO3f2f15VfzArl+vIBtT0shEilMmWgFsz3Q3ol2Z9Uw9vDX50lEIqy/NZAaW33pMKUNu6idvlzIpUUJGGDz9OcZ4ADlnc9gd+/LGP93+W9CX51Xca1GIDT+RdbxlcZmVhqbs9o2P/qkeAQMf6irxfH6a7h++DY15vruGxxHerHUuMy6U79sKk+ewPnmG1lttvY2bO1t8OFJAO6ePcfdsc+U/CpHIB1cu3fvfn9722Db8e7bqm7VI7A9+TPxPxfZvniZuO8Pgy3wWBsAZbsfx/58N6W76otPIDj4fsE5sVkfsVmfMjgobkH9kj+lFYcO5pxXceigYW7RCMjjFmjtwL6/i9rrU4aMt9S4qL0+hX1/F4HWjrzHM11MfXK14AbBgWHK9z1L3Y1rBFqTH7a6G9dY6z9G5OqUGXfmCdQv+YnN+bnz4iusHx1k5y8XAVg/Okjk6hQ1P31PWYv66uF/XETxv5YACF+6QsznJ+bzE750xWAzI0oRqP5ynOA7QxkrW+vtN/wODgwTZBiAhzznlAgoRaDihedwDh5TcgiwY3gQe1en0lz1q3jkOJUjx5VJqIqpJIzM/Mpabz/1S36C740YbNVnThFo20v12dOUdzxdfAJbFybY+OBE6oKpPnMqY07db9OsNDZT9enHOA73mCKg5QWfmDSA5zpm8gZcaWwGaymOngP53GqSQFynxBYWM96Fjp4DBmeFrtlc9tjCouymMC3cL5fCALHZOf3Eool8lgsJC0ytxO122wAnUEWewqRqfKxQSFOyNTHJxtBoVpsoTP4BNoCQlWQEwiTLJUTRoC/NLACeodFpoCAJCd7X1LBXDMn8Si/NwoCmUpym3vCe+eWb+SKhA38KY27lLk4LlOey1Zdvt7KR0IE/KVYp91lPIHt5nk8EMTvJPHEKErf1JHTgTwjwkNCwBMolBQnkIOGUkQD0Kw9hAlyZQBYSlYLETUDueYhkcimDmyKQRsIh1CZMUZKh3zIDbpqAjoRMSnlU5RGLmgEH+A/wA7/GPZUgTwAAAABJRU5ErkJgghLGZH9SBAAA</data>
+        <length>1492</length>
+        <position>1</position>
+        <sys_attachment display_value="image" sys_id="128c094bb3413300d66e85d516a8dcbc">128c094bb3413300d66e85d516a8dcbc</sys_attachment>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-04-30 21:06:15</sys_created_on>
+        <sys_id>d28c094bb3413300d66e85d516a8dcbc</sys_id>
+    </sys_attachment_doc>
+</record_update>
