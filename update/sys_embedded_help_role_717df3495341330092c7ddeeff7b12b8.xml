@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_embedded_help_role">
+    <sys_embedded_help_role action="INSERT_OR_UPDATE">
+        <order>1000</order>
+        <role display_value="x_cta_reservation.cta_reservations_user" name="x_cta_reservation.cta_reservations_user">b17df3495341330092c7ddeeff7b12b5</role>
+        <sys_class_name>sys_embedded_help_role</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-04-25 04:51:24</sys_created_on>
+        <sys_id>717df3495341330092c7ddeeff7b12b8</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>b17df3495341330092c7ddeeff7b12b5</sys_name>
+        <sys_package display_value="CTA Reservation" source="x_cta_reservation">1119f3c55341330092c7ddeeff7b1262</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="CTA Reservation">1119f3c55341330092c7ddeeff7b1262</sys_scope>
+        <sys_update_name>sys_embedded_help_role_717df3495341330092c7ddeeff7b12b8</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-04-25 04:51:24</sys_updated_on>
+    </sys_embedded_help_role>
+</record_update>

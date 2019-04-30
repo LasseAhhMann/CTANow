@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ws_operation">
+    <sys_ws_operation action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <consumes>application/json,application/xml,text/xml</consumes>
+        <consumes_customized>false</consumes_customized>
+        <default_operation_uri/>
+        <enforce_acl>cf9d01d3e73003009d6247e603f6a990</enforce_acl>
+        <http_method>GET</http_method>
+        <name>points</name>
+        <operation_script><![CDATA[(function process(/*RESTAPIRequest*/ request, /*RESTAPIResponse*/ response) {
+
+	var stations = {};
+    // implement resource here
+	var ne_lat = request.queryParams['NEpoint_latitude'];
+	var ne_long = request.queryParams['NEpoint_longitude'];
+	var sw_lat = request.queryParams['SWpoint_latitude'];
+	var sw_long = request.queryParams['SWpoint_longitude'];
+	
+	var gr = new GlideRecord("x_cta_reservation_cta_stations");
+	gr.addEncodedQuery("latitude<=" + ne_lat + "^longitude<=" + ne_long + "^latitude>=" + sw_lat + "^longitude>=" + sw_long);
+	gs.error(gr.getEncodedQuery());
+	gr.query();
+	while (gr.next()) {
+		if (!stations.hasOwnProperty(gr.getValue("station_name")))
+			stations[gr.getValue("station_name")] = {
+				stop_names : [],
+				station_name: gr.getValue("station_name"),
+				latitude : gr.getValue("latitude") + "",
+				longitude: gr.getValue("longitude") + ""
+			};
+		var station = stations[gr.getValue("station_name")];
+		station.stop_names.push({ name : gr.getValue("stop_name"),
+								direction : gr.getValue("direction"),
+								line : getLine(gr),
+								sys_id : gr.getValue("sys_id")});
+	}
+	
+	return stations;
+	
+	function getLine(/*GlideRecord*/ record) {
+		if (gr.getValue("blue") > 0)
+			return "blue";
+		if (gr.getValue("green") > 0)
+			return "green";
+		if (gr.getValue("orange") > 0)
+			return "orange";
+		if (gr.getValue("brown") > 0)
+			return "brown";
+		if (gr.getValue("pink") > 0)
+			return "pink";
+		if (gr.getValue("purple") > 0 || gr.getValue("purple_express") > 0)
+			return "purple";
+		if (gr.getValue("red") > 0)
+			return "red";
+		
+		return "blue";
+	}
+
+})(request, response);]]></operation_script>
+        <operation_uri>/api/x_cta_reservation/cta_stations/points</operation_uri>
+        <produces>application/json,application/xml,text/xml</produces>
+        <produces_customized>false</produces_customized>
+        <relative_path>/points</relative_path>
+        <request_example/>
+        <requires_acl_authorization>true</requires_acl_authorization>
+        <requires_authentication>true</requires_authentication>
+        <requires_snc_internal_role>true</requires_snc_internal_role>
+        <short_description/>
+        <sys_class_name>sys_ws_operation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-04-30 19:40:27</sys_created_on>
+        <sys_id>5613780fb3013300d66e85d516a8dc6c</sys_id>
+        <sys_mod_count>6</sys_mod_count>
+        <sys_name>points</sys_name>
+        <sys_package display_value="CTA Reservation" source="x_cta_reservation">1119f3c55341330092c7ddeeff7b1262</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="CTA Reservation">1119f3c55341330092c7ddeeff7b1262</sys_scope>
+        <sys_update_name>sys_ws_operation_5613780fb3013300d66e85d516a8dc6c</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-04-30 20:25:18</sys_updated_on>
+        <web_service_definition display_value="CTA Stations">1ef2380fb3013300d66e85d516a8dc0b</web_service_definition>
+        <web_service_version/>
+    </sys_ws_operation>
+</record_update>

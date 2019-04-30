@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ui_script">
+    <sys_ui_script action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <description/>
+        <global>false</global>
+        <name>x_cta_reservation.TrainStationAdder</name>
+        <script><![CDATA[(function(pinRegistry) {
+	
+	function reserveThing(reservation, callback) {
+        var xhttp = new XMLHttpRequest();
+        var ENDPOINT = "/api/x_bn/reserve_a_thing/reservation";
+        xhttp.open("POST", ENDPOINT);
+        xhttp.addEventListener("error", function() { 
+            console.error("Connection error", xhttp);
+        });
+    
+        xhttp.addEventListener("load", function() {
+            var responseObj = JSON.parse(xhttp.response);
+            if (responseObj.result)
+                callback(responseObj.result);
+            else
+                console.error("No result for query", xhttp);
+        });
+    
+        xhttp.setRequestHeader("Content-type", "application/json");
+        xhttp.setRequestHeader("Accept", "application/json");
+        xhttp.setRequestHeader("X-UserToken", window.g_ck);
+        xhttp.send(JSON.stringify(reservation));
+    
+        return xhttp;
+    }
+	
+	pinRegistry['x_cta_reservation_cta_stations'] = {
+		getPoints : function(SWpoint, NEpoint, callback) {			
+			x_cta_reservation.GetStations.getPoints(SWpoint, NEpoint, callback);
+		},
+		
+		getTemplate : function(point) {
+			var template = "<b>" + point.station_name + "</b><br />";
+			template += "Chicago, IL" + "</br />";
+			for (var i = 0; i < point.stop_names.length; i++) {
+				var station = point.stop_names[i];
+				
+				template += "<a href='javascript:pinRegistry[\"x_cta_reservation_cta_stations\"].makeReservation(\"" + station.sys_id + "\")' style='color:" + station.line + "'>" + station.name + "</a>";
+            template += "<br /><br /><div id='" + station.sys_id + "'></div>";
+			}
+			
+			return template;
+		},
+		
+		makeReservation : function(sys_id) {
+			var reservation = {};
+				reservation.thing_table = "x_cta_reservation_cta_stations";
+				reservation.thing = sys_id;
+				reservation.start_time = Date.now();
+				reservation.end_time = Date.now() + (60 * 60 * 1000);
+			
+			reserveThing(reservation, (result) => {
+					document.getElementById(sys_id).innerHTML="Congrats! You have reservation " + result.number;
+				});
+		}
+	};
+}(pinRegistry));
+]]></script>
+        <script_name>TrainStationAdder</script_name>
+        <sys_class_name>sys_ui_script</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-04-29 09:49:04</sys_created_on>
+        <sys_id>3af4e96e5341330092c7ddeeff7b1254</sys_id>
+        <sys_mod_count>9</sys_mod_count>
+        <sys_name>x_cta_reservation.TrainStationAdder</sys_name>
+        <sys_package display_value="CTA Reservation" source="x_cta_reservation">1119f3c55341330092c7ddeeff7b1262</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="CTA Reservation">1119f3c55341330092c7ddeeff7b1262</sys_scope>
+        <sys_update_name>sys_ui_script_3af4e96e5341330092c7ddeeff7b1254</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-04-30 20:31:07</sys_updated_on>
+        <ui_type>0</ui_type>
+        <use_scoped_format>false</use_scoped_format>
+    </sys_ui_script>
+</record_update>

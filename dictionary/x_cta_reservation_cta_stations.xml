@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element label="CTA Stations" max_length="40" name="x_cta_reservation_cta_stations" type="collection">
+        <element attributes="edge_encryption_enabled=true" label="Accessible" max_length="40" name="accessible" type="boolean"/>
+        <element attributes="edge_encryption_enabled=true" label="Blue" max_length="40" name="blue" type="boolean"/>
+        <element attributes="edge_encryption_enabled=true" label="Brown" max_length="40" name="brown" type="boolean"/>
+        <element attributes="edge_encryption_enabled=true" choice="1" label="Direction" max_length="40" name="direction" type="string">
+            <choice>
+                <element inactive_on_update="false" label="E" sequence="0" value="E"/>
+                <element inactive_on_update="false" label="N" sequence="0" value="N"/>
+                <element inactive_on_update="false" label="S" sequence="0" value="S"/>
+                <element inactive_on_update="false" label="W" sequence="0" value="W"/>
+            </choice>
+        </element>
+        <element attributes="edge_encryption_enabled=true" label="Green" max_length="40" name="green" type="boolean"/>
+        <element attributes="edge_encryption_enabled=true" label="Latitude" max_length="40" name="latitude" type="float"/>
+        <element attributes="edge_encryption_enabled=true" label="Location" max_length="40" name="location" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="Longitude" max_length="40" name="longitude" type="float"/>
+        <element attributes="edge_encryption_enabled=true" label="Map Identifier" max_length="40" name="map_identifier" type="integer"/>
+        <element attributes="edge_encryption_enabled=true" label="Orange" max_length="40" name="orange" type="boolean"/>
+        <element attributes="edge_encryption_enabled=true" label="Pink" max_length="40" name="pink" type="boolean"/>
+        <element attributes="edge_encryption_enabled=true" label="Purple" max_length="40" name="purple" type="boolean"/>
+        <element attributes="edge_encryption_enabled=true" label="Purple Express" max_length="40" name="purple_express" type="boolean"/>
+        <element attributes="edge_encryption_enabled=true" label="Red" max_length="40" name="red" type="boolean"/>
+        <element attributes="edge_encryption_enabled=true" label="Station Description" max_length="40" name="station_description" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="Station Name" max_length="40" name="station_name" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="Stop Identifier" max_length="40" name="stop_identifier" type="integer"/>
+        <element attributes="edge_encryption_enabled=true" label="Stop Name" max_length="40" name="stop_name" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="Yellow" max_length="40" name="yellow" type="boolean"/>
+    </element>
+</database>

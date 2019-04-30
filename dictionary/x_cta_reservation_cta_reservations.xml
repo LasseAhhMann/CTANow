@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element label="CTA Reservations" max_length="40" name="x_cta_reservation_cta_reservations" type="collection">
+        <element label="Departure" max_length="40" name="departure" type="glide_date_time"/>
+        <element label="Number" max_length="40" name="number" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="Reserved By" max_length="32" name="reserved_by" reference="sys_user" type="reference"/>
+        <element attributes="edge_encryption_enabled=true" label="Station" max_length="32" name="station" reference="x_cta_reservation_cta_stations" type="reference"/>
+        <index name="index">
+            <element name="reserved_by"/>
+        </index>
+        <index name="index2">
+            <element name="station"/>
+        </index>
+    </element>
+</database>

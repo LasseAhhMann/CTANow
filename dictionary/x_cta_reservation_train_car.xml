@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element label="Train Car" max_length="40" name="x_cta_reservation_train_car" type="collection">
+        <element attributes="edge_encryption_enabled=true" label="Capacity" max_length="40" name="capacity" type="integer"/>
+        <element attributes="edge_encryption_enabled=true" choice="1" label="Car Class" max_length="40" name="car_class" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Economy" sequence="0" value="economy"/>
+                <element inactive_on_update="false" label="Premium" sequence="1" value="premium"/>
+                <element inactive_on_update="false" label="Business" sequence="2" value="business"/>
+                <element inactive_on_update="false" label="Z Class" sequence="3" value="z"/>
+            </choice>
+        </element>
+        <element label="Name" max_length="40" name="name" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="Train" max_length="32" name="train" reference="x_cta_reservation_cta_train" type="reference"/>
+        <index name="index">
+            <element name="train"/>
+        </index>
+    </element>
+</database>

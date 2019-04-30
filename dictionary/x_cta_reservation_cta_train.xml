@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element label="CTA Train" max_length="40" name="x_cta_reservation_cta_train" type="collection">
+        <element display="true" label="Train Number" max_length="40" name="train_number" type="string"/>
+    </element>
+</database>
